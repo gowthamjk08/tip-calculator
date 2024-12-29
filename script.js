@@ -60,19 +60,7 @@ function persentage(e,tip){
        
  });
  person.addEventListener('focusout',()=>{ 
-    person.style.cssText = "border: 2px solid transparent;";
-    if(person.value == 0 || (person.value === '')){
-        document.getElementById('errorMessage').style.cssText = "display:block";
-        person.style.cssText = "border: 2px solid rgb(214, 0, 0);";
-    }
-    else if(e.code === 'Enter'|| e.keyCode === 13){ 
-         document.getElementById('reset').className="";
-            let result = amount.value * ((tips) / 100);
-            result/=person.value;
-            tipAmount.innerText = (result.toFixed(2));
-            total.innerText = ((result+amount.value*1 / person.value).toFixed(2));
-           } 
- })
+    person.style.cssText = "border: 2px solid transparent;"; })
 
  function reset(){
     amount.value = "";
