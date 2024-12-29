@@ -161,7 +161,9 @@ h6{
     outline: none;
     border-radius: 5px;
     width: 100%;
-    padding: 0.5em;
+    padding: 10px;
+    margin:20px 0;
+    font-size: 24px;
     font-weight: 600;
     color: hsl(183, 100%, 11%);
     background-color: var(--Strongcyan);
