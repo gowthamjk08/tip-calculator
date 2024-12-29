@@ -26,7 +26,7 @@ function persentage(e,tip){
 }
 
  amount.addEventListener('keyup',(e)=>{
-    if(e.code === 'Enter'){
+    if(e.code === 'Enter' || e.keyCode === 13){
         custom.style="display:block";
         custom.focus();
         let tipsContainer = document.querySelectorAll('.tips-container button')
@@ -38,7 +38,7 @@ function persentage(e,tip){
  });
  custom.addEventListener('keyup',(e)=>{
     tips = custom.value;
-    if(e.code === 'Enter'){
+    if(e.code === 'Enter' || e.keyCode === 13){
         person.focus();
     }
  });
@@ -50,7 +50,7 @@ function persentage(e,tip){
         document.getElementById('errorMessage').style.cssText = "display:block";
         person.style.cssText = "border: 2px solid rgb(214, 0, 0);";
     }
-    else if(e.code === 'Enter'){ 
+    else if(e.code === 'Enter' || e.keyCode === 13){ 
          document.getElementById('reset').className="";
             let result = amount.value * ((tips) / 100);
             result/=person.value;
@@ -65,7 +65,7 @@ function persentage(e,tip){
         document.getElementById('errorMessage').style.cssText = "display:block";
         person.style.cssText = "border: 2px solid rgb(214, 0, 0);";
     }
-    else if(e.code === 'Enter'){ 
+    else if(e.code === 'Enter'|| e.keyCode === 13){ 
          document.getElementById('reset').className="";
             let result = amount.value * ((tips) / 100);
             result/=person.value;
