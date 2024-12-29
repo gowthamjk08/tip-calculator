@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Space Mono", serif;
+    transition: all 300ms;
+}
+:root{
+    --Strongcyan: hsl(172, 67%, 45%);
+    --Verydarkcyan: hsl(183, 100%, 15%);
+    --Darkgrayishcyan: hsl(186, 14%, 43%);
+    --Grayishcyan: hsl(184, 14%, 56%);
+    --Lightgrayishcyan: hsl(185, 41%, 84%);
+    --Verylightgrayishcyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+main{
+    background-color: var(--Lightgrayishcyan);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 10px;
+}
+.overall-container{
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    background-color: var(--White);
+    padding: 20px;
+    border-radius: 10px;
+}
+.calculate-container{
+    padding: 10px 20px;
+    flex-basis: 100%;
+}
+.result-container{
+    flex-basis: 100%;
+    background-color: var(--Verydarkcyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius:10px;
+}
+
+.input-filed{
+    position: relative;
+    img{
+        position: absolute;
+        top: 50%;
+        left:10px;
+        transform: translateY(-50%);
+    }
+}
+input{
+    width: 100%;
+    border: 2px solid transparent;
+    outline: none;
+    text-align: end;
+    padding: 0.3em 0.5em 0.3em 1.5em;
+    border-radius: 5px;
+    font-weight: 600;
+    color: var(--Verydarkcyan);
+    background-color: hsla(185, 49%, 82%, 0.527);
+}
+input:focus{
+    border:2px solid var(--Strongcyan);
+}
+h2{
+    font-size: 20px;
+    font-weight: 400;
+    margin:0.5em 0;
+}
+.m{
+    margin-top: 1.5em;
+}
+.tips-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+.tips-container button{
+    border: none;
+    outline: none;
+    padding: .3rem;
+    border-radius: 5px;
+    background-color: var(--Verydarkcyan);
+    color:var(--White);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.button-active{
+    background-color: hsl(172, 100%, 50%) !important;
+}
+.tips-container button:hover{
+    color: var(--Verydarkcyan);
+    background-color: var(--Strongcyan);
+}
+.custom-button{
+    position: relative;
+    button{
+        width: 100%;
+        height: 100%;
+        color: var(--Darkgrayishcyan);
+        background-color: var(--Verylightgrayishcyan);
+        isolation: isolate;
+    }
+    input{
+        height: 100%;
+        inset: 0;
+        position: absolute;
+        display: none;
+    }
+}
+
+.numbers-of-person{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+#errorMessage{
+    display: none;
+    color: rgb(184, 0, 0);
+    font-size: 16px;
+}
+
+
+/* result section  */
+
+h1{
+    font-size: 38px;
+    font-weight: 500;
+    color:hsla(172, 87%, 69%, 0.671)
+}
+h3{
+    font-size: 20px;
+    color: var(--White);
+}
+h6{
+    font-weight:100;
+    font-size: 18px;
+    color: var(--Grayishcyan);
+}
+.tip-amount{
+    display: flex;
+    justify-content: space-between;
+    align-items:last baseline;
+    margin:20px 0;
+}
+.result-container button{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 100%;
+    padding: 0.5em;
+    font-weight: 600;
+    color: hsl(183, 100%, 11%);
+    background-color: var(--Strongcyan);
+    cursor: pointer;
+   
+}
+.reset-disable{
+    background-color:hsla(183, 100%, 21%, 0.719) !important;
+}
+.result-container button:hover{
+    background-color: hsl(172, 100%, 32%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+@media screen and (max-width:580px) {
+    main{
+        padding: 30px 0;
+    }
+    .overall-container{
+        width: 75%;
+        flex-direction: column;
+    }
+    .calculate-container{
+        padding:0px 0 30px;
+    }
+    .tips-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width:450px) {
+    .overall-container{
+        width: 100%;
+    }
+}
