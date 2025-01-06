@@ -57,11 +57,8 @@ function persentage(e,tip){
             tipAmount.innerText = (result.toFixed(2));
             total.innerText = ((result+amount.value*1 / person.value).toFixed(2));
            } 
-    person.blur();
-       
  });
- person.addEventListener('focusout',()=>{ 
-    person.style.cssText = "border: 2px solid transparent;"; })
+
 
  function reset(){
     amount.value = "";
